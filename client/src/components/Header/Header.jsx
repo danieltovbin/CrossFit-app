@@ -8,10 +8,11 @@ const Header = () => {
   return (
     <Navbar
       expand="lg"
+      sticky="top"
       className="header"
     >
       <Container>
-        <Navbar.Brand href="/">CrossFit</Navbar.Brand>
+        <Navbar.Brand style={{fontSize: '35px'}} href="/">CrossFit</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

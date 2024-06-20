@@ -1,0 +1,25 @@
+.images-carousel{
+    width: 50%;
+    height: 100%;
+
+    img {
+        width: 100px;
+        height: 300px;
+        border-radius: 20px;
+    }
+}
+
+#getting-started {
+    padding: 5%;
+    width: 100vw;
+    height: 90vh;
+    display:flex;
+
+    .nav-link {
+        color: #292e37;
+
+        &:focus {
+            color: #a1afc8;
+        }
+    }
+}
