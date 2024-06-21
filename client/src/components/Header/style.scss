@@ -1,6 +1,7 @@
-.header {
-  top: 0;
-  background-color: #e6e6e6;
+.navbar-dark,
+.navbar[data-bs-theme="dark"] {
+  background-color: black !important;
+  width: 100vw;
 }
 
 a.navbar-brand {

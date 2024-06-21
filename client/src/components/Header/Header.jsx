@@ -6,11 +6,9 @@ import "./style.scss";
 
 const Header = () => {
   return (
-    <Navbar expand="lg" bg="dark" className="header" data-bs-theme="dark">
+    <Navbar sticky="top" expand="lg" bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="/">
-          CrossFit
-        </Navbar.Brand>
+        <Navbar.Brand href="/">CrossFit</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -19,10 +17,16 @@ const Header = () => {
             <Nav.Link href="#contact-us">CONTACT US</Nav.Link>
           </Nav>
           <Nav className="social-media">
-            <Nav.Link href="https://www.instagram.com/crossfitisrael/">
+            <Nav.Link
+              href="https://www.instagram.com/crossfitisrael/"
+              target="_blank"
+            >
               <i className="bi bi-instagram"></i>
             </Nav.Link>
-            <Nav.Link href="https://www.facebook.com/crossfitisrael.official">
+            <Nav.Link
+              href="https://www.facebook.com/crossfitisrael.official"
+              target="_blank"
+            >
               <i className="bi bi-facebook"></i>
             </Nav.Link>
           </Nav>
