@@ -1,10 +1,25 @@
-.images-carousel{
-    width: 50%;
-    height: 100%;
+.images-carousel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    aspect-ratio: 3/2;
+  }
+}
+
+@media (max-width: 1140px) {
+  .images-carousel {
+    width: 100%;
 
     img {
-        width: 100px;
-        height: 300px;
-        border-radius: 20px;
+      object-fit: cover;
+      aspect-ratio: 2/1;
+      border-radius: 0px;
     }
+  }
 }

@@ -9,19 +9,19 @@ const GettingStarted = () => {
   return (
     <>
       <div id="getting-started">
-        <div>
-          <Tab.Container
-            defaultActiveKey="first"
-            style={{ width: "50%", height: "100%" }}
-          >
-            <Nav style={{ fontSize: "30px" }}>
+        <div className="container">
+          <Tab.Container defaultActiveKey="first">
+            <div className="title">
+              Discover CrossFit: Your Path to Total Fitness
+            </div>
+            <Nav>
               <Nav.Link eventKey="first">What is CrossFit?</Nav.Link>
               <Nav.Link eventKey="second">
                 What Can CrossFit Do For You?
               </Nav.Link>
             </Nav>
-            <Tab.Content style={{ display: "flex", width: "50vw" }}>
-              <Tab.Pane eventKey="first" style={{ width: "90%" }}>
+            <Tab.Content>
+              <Tab.Pane eventKey="first">
                 CrossFit is a strength, conditioning, and overall fitness
                 program that combines different types of exercises. These
                 include aerobic exercises (like running and rowing), bodyweight
@@ -36,7 +36,7 @@ const GettingStarted = () => {
                 usually not the same every day and can change in duration and
                 content, keeping things interesting and challenging.
               </Tab.Pane>
-              <Tab.Pane eventKey="second" style={{ width: "90%" }}>
+              <Tab.Pane eventKey="second">
                 Participating in CrossFit can bring many benefits. Physically,
                 it can help you get stronger, improve your endurance, and
                 enhance your overall fitness. It can also help you lose fat and
@@ -62,15 +62,8 @@ const GettingStarted = () => {
           }
         />
       </div>
-      <div style={{ height: "90vh", width: "100vw", marginTop: "20px" }}>
-        <video
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          src={video}
-          autoPlay
-          loop
-          controls
-          muted
-        ></video>
+      <div className="video-container">
+        <video src={video} autoPlay loop controls muted></video>
       </div>
     </>
   );
