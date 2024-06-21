@@ -1,29 +1,20 @@
 import React from "react";
 import CarouselImages from "../CarouselImages/CarouselImages";
 import ValidatedForm from "./ValidatedForm/ValidatedForm";
+import "./style.scss";
 
 const ContactUs = () => {
   return (
-    <div
-      id="contact-us"
-      style={{ backgroundColor: "black", color: "white", padding: "5%" }}
-    >
-      <p
-        style={{ textAlign: "center", fontSize: "60px", marginBottom: "40px" }}
-      >
-        Contact Us
-      </p>
-      <div style={{ display: "flex" }}>
-        <div style={{ width: "50vw", height: "35vh" }}>
-          <div
-            className=""
-            style={{ width: "100%", height: "50%", display: "flex" }}
-          >
+    <div id="contact-us">
+      <h2>Contact Us</h2>
+      <div className="container">
+        <div className="content">
+          <p>
             Ready to take the next step? We're here to help you get started.
             Contact us below for detailed information and personalized
             assistance. Let's make your journey a success together!
-          </div>
-          <div style={{ width: "100%", height: "50%" }}>
+          </p>
+          <div className="container__form">
             <ValidatedForm />
           </div>
         </div>
