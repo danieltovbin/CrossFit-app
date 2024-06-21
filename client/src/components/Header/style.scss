@@ -1,4 +1,24 @@
 .header {
-    top: 0 ;
-    background-color: #e6e6e6;
+  top: 0;
+  background-color: #e6e6e6;
+}
+
+a.navbar-brand {
+  font-size: 35px;
+}
+
+.navbar > .container {
+  padding: 20px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none;
 }
