@@ -5,7 +5,7 @@ import './carouselImgStyle.scss'
 const CarouselImages = ({firstImgSrc, secondImgSrc, thirdImgSrc}) => {
   return (
     <div className="images-carousel">
-    <Carousel>
+    <Carousel interval={1000}>
       <Carousel.Item>
         <img
           src={firstImgSrc}
