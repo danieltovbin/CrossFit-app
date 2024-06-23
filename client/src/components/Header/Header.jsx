@@ -29,6 +29,11 @@ const Header = () => {
             >
               <i className="bi bi-facebook"></i>
             </Nav.Link>
+            <Nav.Link
+              href="https://www.facebook.com/crossfitisrael.official"
+            >
+              <i className="bi bi-cart"></i>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
