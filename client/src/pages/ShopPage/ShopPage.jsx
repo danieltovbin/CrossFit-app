@@ -8,7 +8,8 @@ import { CartContext } from "../../context/cartContext";
 
 const ShopPage = () => {
   const [products, setProducts] = useState([]);
-  const { addToCart } = useContext(CartContext)
+  const { addToCart } = useContext(CartContext);
+  const [added, setAdded] = useState({});
 
   const fetchProducts = async () => {
     try {
@@ -20,6 +21,14 @@ const ShopPage = () => {
       console.error("Error fetching products", error);
     }
   };
+
+  const handleCartBtn = (product) => {
+    addToCart(product);
+    setAdded((prev) => ({...prev, [product._id]: true}));
+    setTimeout(() => {
+      setAdded((prev) => ({...prev, [product._id]: false}));
+    }, 3000);
+  }
 
   useEffect(() => {
     fetchProducts();
@@ -45,9 +54,9 @@ const ShopPage = () => {
               <Card.Body>
                 <Card.Title> {product.name}</Card.Title>
                 <Card.Text>{`$${product.price}`}</Card.Text>
-                <Button onClick={() => addToCart(product)} variant="outline-primary">
-                  <i className="bi bi-cart"></i>
-                  Add To Cart
+                <Button onClick={() => handleCartBtn(product)} variant={added[product._id] ? "light" : "outline-primary"} disabled={added[product._id]}>
+                  <i className={added[product._id]? "bi bi-check-lg" : "bi bi-cart"}></i>
+                  {added[product._id]? "Added": "Add To Cart"}
                 </Button>
               </Card.Body>
             </Card>

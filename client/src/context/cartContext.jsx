@@ -9,8 +9,12 @@ const CartProvider = ({ children }) => {
         setCart((prevCart) => [...prevCart, product])
     }
 
+    const removeFromCart = async (cartItemId) => {
+      setCart(cart.filter((item) => item._id !== cartItemId));
+    };
+
     return (
-      <CartContext.Provider value={{cart, addToCart}}>
+      <CartContext.Provider value={{cart, addToCart, removeFromCart}}>
         {children}
       </CartContext.Provider>
     )
