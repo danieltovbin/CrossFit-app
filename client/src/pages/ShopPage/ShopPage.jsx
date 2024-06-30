@@ -15,8 +15,6 @@ const ShopPage = () => {
     try {
       const response = await axios.get(`API/products/get`);
       setProducts(response.data);
-      console.log("response", response);
-      console.log("response data", response.data);
     } catch (error) {
       console.error("Error fetching products", error);
     }
