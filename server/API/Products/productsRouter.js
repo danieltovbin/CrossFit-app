@@ -1,11 +1,14 @@
 import express from 'express';
-import { deleteProduct, getAllProducts, getProduct, updateProduct } from './productsCont.js';
+import { createProduct, deleteProduct, getAllProducts, getProduct, updateProduct } from './productsCont.js';
+import { ROLES_LIST } from '../../config/roles_list.js';
+import verifyRoles from '../../middleware/verifyRoles.js';
 const router = express.Router()
 
 router
-.get('/get-products', getAllProducts)
-// .put('/update-products', updateProduct)
-.delete('/delete-product', deleteProduct)
-.get('/get-product/:id', getProduct)
+.get('/get', getAllProducts)
+.post('/create', verifyRoles(ROLES_LIST.Admin), createProduct)
+.put('/update', verifyRoles(ROLES_LIST.Admin), updateProduct)
+.delete('/delete', verifyRoles(ROLES_LIST.Admin), deleteProduct)
+.get('/get/:id', getProduct)
 
 export default router;

@@ -8,6 +8,10 @@ a.navbar-brand {
   font-size: 35px;
 }
 
+.custom-header {
+    box-sizing: content-box !important;
+}
+
 .navbar > .container {
   padding: 20px;
 }

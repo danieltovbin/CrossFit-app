@@ -1,16 +1,18 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Header from "../../components/Header/Header";
 import "./style.scss";
+import { CartContext } from "../../context/cartContext";
 
 const ShopPage = () => {
   const [products, setProducts] = useState([]);
+  const { addToCart } = useContext(CartContext)
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get(`API/Products/get-products`);
+      const response = await axios.get(`API/products/get`);
       setProducts(response.data);
       console.log("response", response);
       console.log("response data", response.data);
@@ -42,8 +44,8 @@ const ShopPage = () => {
               </div>
               <Card.Body>
                 <Card.Title> {product.name}</Card.Title>
-                <Card.Text>{`${product.price}$`}</Card.Text>
-                <Button variant="outline-primary">
+                <Card.Text>{`$${product.price}`}</Card.Text>
+                <Button onClick={() => addToCart(product)} variant="outline-primary">
                   <i className="bi bi-cart"></i>
                   Add To Cart
                 </Button>

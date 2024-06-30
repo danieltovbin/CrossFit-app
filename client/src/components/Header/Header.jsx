@@ -3,10 +3,11 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./style.scss";
+import Cart from "../Cart/Cart";
 
 const Header = () => {
   return (
-    <Navbar sticky="top" expand="lg" bg="dark" data-bs-theme="dark">
+    <Navbar className="custom-header" sticky="top" expand="lg" bg="dark" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="/">CrossFit</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -29,10 +30,8 @@ const Header = () => {
             >
               <i className="bi bi-facebook"></i>
             </Nav.Link>
-            <Nav.Link
-              href="https://www.facebook.com/crossfitisrael.official"
-            >
-              <i className="bi bi-cart"></i>
+            <Nav.Link>
+              <Cart />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
