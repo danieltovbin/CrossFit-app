@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/API': {
-        target: 'http://localhost:3000',},
+        target: 'https://crossfit-web-server.onrender.com',},
     },
   },
 })
