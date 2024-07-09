@@ -8,6 +8,7 @@ export default defineConfig({
     proxy: {
       '/API': {
         target: 'https://crossfit-web-server.onrender.com',},
+        changeOrigin: true, 
     },
   },
 })
