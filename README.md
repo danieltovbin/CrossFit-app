@@ -6,6 +6,7 @@ I am a fan of coding and CrossFit, so I decided to create a CrossFit website. I 
 - **Demo Video**: A short video demonstrating CrossFit.
 - **Contact Us**: At the bottom of the homepage, you can send a message.
 - **Navigation**: The header includes navigation links. Both "GETTING STARTED" and "CONTACT US" are on the homepage, while "Shop" is on a separate page.
+- **Shop Page**: View CrossFit products, add items to the cart, and see the products you added via the cart icon placed in the header. You can also remove items from the cart by clicking the remove button.
 - **404 Page**: Displayed when trying to access a non-existent page.
 
 ## Tools and Technologies
@@ -19,16 +20,8 @@ I am a fan of coding and CrossFit, so I decided to create a CrossFit website. I 
 - **Context**: React Context API for managing state.
 
 ## How to Use
-navigate to the main branch and clone the repository: https://github.com/danieltovbin/CrossFit-app.git 
-
-Open the terminal and set up the client:
-cd client
-npm install
-npm run dev
-
-Set up the server:
-npm install
-npm run dev
+The project is deployed and ready to use. Simply click the link below to access it:
+https://crossfit-web.onrender.com
 
 ## Enjoy exploring the CrossFit website!
 
