@@ -1,5 +1,3 @@
-const allowedOrigins = [
-    'https://crossfit-web.onrender.com'
-];
+const allowedOrigins = ['https://crossfit-web.onrender.com'];
 
 export default allowedOrigins;
